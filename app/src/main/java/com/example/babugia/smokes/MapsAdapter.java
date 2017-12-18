@@ -51,13 +51,11 @@ public class MapsAdapter extends ArrayAdapter {
 
         try{
             final ImageView mapImage = (ImageView)view.findViewById(R.id.imageview_button);
-            final TextView mapName = (TextView)view.findViewById(R.id.textview_button_name);
-
-//            Toast.makeText(mContext, "Lampada "+String.valueOf(i) +"="+String.valueOf(isOn), Toast.LENGTH_SHORT).show();
+            //final TextView mapName = (TextView)view.findViewById(R.id.textview_button_name);
 
 
             mapImage.setImageResource(map.getImageResource());
-            mapName.setText(map.getName());
+          //  mapName.setText(map.getName());
 
         }catch(Exception e) {
             Toast.makeText(mContext, e.toString(), Toast.LENGTH_LONG).show();
