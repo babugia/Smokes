@@ -15,6 +15,7 @@ public class MapSelected extends AppCompatActivity {
 
         if(bundle.containsKey("mapName")){
             String mapName = bundle.getString("mapName");
+            this.setTitle(mapName);
             Toast.makeText(this, mapName, Toast.LENGTH_SHORT).show();
         }
 

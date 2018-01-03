@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Smokes</string>
+    <string name="de_dust2">Dust 2</string>
+    <string name="de_cache">Cache</string>
+    <string name="de_infeno">Inferno</string>
+    <string name="de_mirage">Mirage</string>
+    <string name="de_train">Train</string>
+    <string name="de_overpass">Overpass</string>
+    <string name="de_nuke">Nuke</string>
+    <string name="de_cobblestone">Cobble</string>
 </resources>
