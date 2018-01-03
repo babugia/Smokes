@@ -1,5 +1,6 @@
 package com.example.babugia.smokes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         mapsAdapter = new MapsAdapter(this, maps);
         gridView.setAdapter(mapsAdapter);
 
+        final Intent it = new Intent(this, MapSelected.class);
+
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
@@ -27,20 +30,22 @@ public class MainActivity extends AppCompatActivity {
 
                 //ir para a view das smokes do mapa clicado
 
+                it.putExtra("mapName", map.getName());
+                startActivity(it);
 
             }
         });
     }
 
     private Mapa[] maps = {
-            new Mapa("cache", R.drawable.cache),
-            new Mapa("cobble", R.drawable.cobble),
-            new Mapa("dust2", R.drawable.dust2),
-            new Mapa("inferno", R.drawable.inferno),
-            new Mapa("mirage", R.drawable.mirage),
-            new Mapa("nuke", R.drawable.nuke),
-            new Mapa("overpass", R.drawable.overpass),
-            new Mapa("train", R.drawable.train)
+            new Mapa("Cache", R.drawable.cache),
+            new Mapa("Cobble", R.drawable.cobble),
+            new Mapa("Dust2", R.drawable.dust2),
+            new Mapa("Inferno", R.drawable.inferno),
+            new Mapa("Mirage", R.drawable.mirage),
+            new Mapa("Nuke", R.drawable.nuke),
+            new Mapa("Overpass", R.drawable.overpass),
+            new Mapa("Train", R.drawable.train)
 
     };
 }
