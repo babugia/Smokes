@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.babugia.smokes.MapSelected">
 
-</android.support.constraint.ConstraintLayout>
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/tabCT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/localText"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:textColor="#000000"
+                        android:paddingTop="10dp"
+                        />
+
+                    <View
+                        android:id="@+id/lineOne"
+                        android:layout_below="@+id/localText"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/light_gray"
+                        android:focusable="false" />
+
+                    <GridView
+                        android:id="@+id/gridViewBombA"
+                        android:layout_below="@+id/lineOne"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:columnWidth="100dp"
+                        android:gravity="center"
+                        android:horizontalSpacing="10dp"
+                        android:numColumns="2"
+                        android:paddingTop="20dp"
+                        android:verticalSpacing="30dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabTR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

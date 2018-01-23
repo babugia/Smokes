@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapSelected"></activity>
+        <activity android:name=".MapSelected" />
+        <activity android:name=".CT" />
+        <activity android:name=".TR"></activity>
     </application>
 
 </manifest>
